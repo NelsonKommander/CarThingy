@@ -39,26 +39,32 @@ class FrontCardFace extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Icon(Icons.directions_car, size: 48, color: Colors.white),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text("Veículo", style: Theme.of(context).textTheme.bodyText1),
-              Text("Gol", style: Theme.of(context).textTheme.bodyText2),
-              Text("Ano", style: Theme.of(context).textTheme.bodyText1),
-              Text("2009", style: Theme.of(context).textTheme.bodyText2)
-            ],
-          ),
-          Padding(
-              padding: EdgeInsets.fromLTRB(
-                  0, 40, MediaQuery.of(context).size.width * 0.36, 40)),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text("Placa", style: Theme.of(context).textTheme.bodyText1),
-              Text("XYZ-1234", style: Theme.of(context).textTheme.bodyText2),
-              Text("Combustível", style: Theme.of(context).textTheme.bodyText1),
-              Text("Flex", style: Theme.of(context).textTheme.bodyText2)
-            ],
+          Expanded(
+                      child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Veículo", style: Theme.of(context).textTheme.bodyText1),
+                    Text("Gol", style: Theme.of(context).textTheme.bodyText2),
+                    Text("Ano", style: Theme.of(context).textTheme.bodyText1),
+                    Text("2009", style: Theme.of(context).textTheme.bodyText2)
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Placa", style: Theme.of(context).textTheme.bodyText1),
+                    Text("XYZ-1234", style: Theme.of(context).textTheme.bodyText2),
+                    Text("Combustível", style: Theme.of(context).textTheme.bodyText1),
+                    Text("Flex", style: Theme.of(context).textTheme.bodyText2)
+                  ],
+                ),
+                Padding(padding: EdgeInsets.all(10))
+              ],
+            ),
           )
         ],
       ),
