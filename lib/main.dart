@@ -1,5 +1,6 @@
+import 'package:carthingy/screens/vehicle/vehicleDetails.dart';
 import 'package:flutter/material.dart';
-import 'screens/vehicles.dart';
+import 'screens/vehicle/vehicles.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,10 +17,11 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: TextTheme(
           bodyText1: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w500, color: Colors.white),
-          bodyText2: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.white)
+          bodyText2: TextStyle(fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.white),
+          headline6: TextStyle(fontSize: 18.0, fontWeight: FontWeight.normal, color: Colors.white)
         )
       ),
-      home: VehiclesPage(),
+      home: VehicleDetais(),
     );
   }
 }
